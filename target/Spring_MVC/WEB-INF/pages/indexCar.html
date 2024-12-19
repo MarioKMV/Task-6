@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<body>
+
+<br>
+<a HREF="/spring_mvc/cars?count=1">TEST = 1</a>
+<br>
+<a HREF="/spring_mvc/cars?count=2">TEST = 2</a>
+<br>
+<a HREF="/spring_mvc/cars?count=3">TEST = 3</a>
+<br>
+<a HREF="/spring_mvc/cars?count=4">TEST = 4</a>
+<br>
+<a HREF="/spring_mvc/cars?count=5">TEST = 5</a>
+<br>
+<a HREF="/spring_mvc/cars?count=6">TEST = 6</a>
+<br>
+<a HREF="/spring_mvc/cars">TEST = null</a>
+<br>
+
+<br>
+
+<br>
+<h2> ALL CARS</h2>
+<br>
+<table border="1">
+  <tr>
+    <th>Model модель</th>
+    <th>Colour</th>
+    <th>Year of release</th>
+  </tr>
+  <tr th:each="msg : ${list}">
+    <td th:text="${msg.getModel()}">car</td>
+    <td th:text="${msg.getColor()}">car</td>
+    <td th:text="${msg.getAge()}">car</td>
+  </tr>
+
+</table>
+<br>
+
+</body>
+</html>
